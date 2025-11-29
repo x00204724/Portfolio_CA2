@@ -147,5 +147,32 @@ function showLoading(button) {
     }, 2000);
 }
 
+// 10. Send message functionality
+function sendMessage() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+    
+    // Create mailto link
+    const subject = `Portfolio Contact from ${name}`;
+    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+    const mailtoLink = `mailto:annitbinu21@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Clear form
+    document.getElementById('contactForm').reset();
+    
+    // Close modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+    modal.hide();
+}
+
 // Initialize breadcrumb updates
 updateBreadcrumb();
