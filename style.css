@@ -1,0 +1,81 @@
+/* Custom styles for portfolio */
+
+body {
+    padding-top: 76px; /* Account for fixed navbar */
+}
+
+/* Hero section styling */
+#hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Progress bar animations */
+.progress-bar {
+    transition: width 0.6s ease;
+}
+
+/* Navbar styling */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Section spacing */
+section {
+    scroll-margin-top: 76px;
+}
+
+/* Badge styling */
+.badge {
+    margin: 2px;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 50px;
+}
+
+/* Carousel custom styling */
+.carousel-item .card {
+    min-height: 250px;
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+}
+
+/* Button group styling */
+.btn-group .btn {
+    margin: 0 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    #hero {
+        min-height: 50vh;
+    }
+    
+    .carousel-item .card {
+        min-height: 200px;
+    }
+}
