@@ -60,26 +60,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// 4. Random motivational quote
-const quotes = [
-    "Code is like humor. When you have to explain it, it's bad.",
-    "The best error message is the one that never shows up.",
-    "Programming isn't about what you know; it's about what you can figure out.",
-    "Experience is the name everyone gives to their mistakes.",
-    "The most important property of a program is whether it accomplishes the intention of its user."
+// 4. Professional status updates
+const statusUpdates = [
+    "Currently seeking internship opportunities for Summer 2025",
+    "Available for networking and collaboration opportunities",
+    "Actively developing cloud computing and data visualization skills",
+    "Open to discussing technology projects and innovations"
 ];
 
-function displayRandomQuote() {
-    const quoteElement = document.getElementById('random-quote');
-    if (quoteElement) {
-        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-        quoteElement.textContent = randomQuote;
+function displayStatusUpdate() {
+    const statusElement = document.getElementById('status-update');
+    if (statusElement) {
+        const randomStatus = statusUpdates[Math.floor(Math.random() * statusUpdates.length)];
+        statusElement.textContent = randomStatus;
     }
 }
 
-// Display new quote every 10 seconds
-setInterval(displayRandomQuote, 10000);
-displayRandomQuote(); // Run once on load
+// Update status every 15 seconds
+setInterval(displayStatusUpdate, 15000);
+displayStatusUpdate(); // Run once on load
 
 // 5. Project filter functionality
 function filterProjects(year) {
@@ -147,14 +146,45 @@ function showLoading(button) {
     }, 2000);
 }
 
-// 10. Send message functionality
+// 10. CAPTCHA functionality
+let captchaAnswer = 0;
+
+function generateCaptcha() {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    captchaAnswer = num1 + num2;
+    
+    const captchaQuestion = document.getElementById('captcha-question');
+    if (captchaQuestion) {
+        captchaQuestion.textContent = `${num1} + ${num2}`;
+    }
+}
+
+// Generate CAPTCHA when modal opens
+document.addEventListener('DOMContentLoaded', function() {
+    const contactModal = document.getElementById('contactModal');
+    if (contactModal) {
+        contactModal.addEventListener('shown.bs.modal', generateCaptcha);
+    }
+});
+
+// 11. Send message functionality
 function sendMessage() {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
+    const captchaInput = document.getElementById('captcha').value;
     
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !captchaInput) {
         alert('Please fill in all fields.');
+        return;
+    }
+    
+    // Verify CAPTCHA
+    if (parseInt(captchaInput) !== captchaAnswer) {
+        alert('Incorrect security answer. Please try again.');
+        generateCaptcha(); // Generate new CAPTCHA
+        document.getElementById('captcha').value = '';
         return;
     }
     
@@ -166,8 +196,10 @@ function sendMessage() {
     // Open email client
     window.location.href = mailtoLink;
     
-    // Clear form
+    // Clear form and generate new CAPTCHA
     document.getElementById('contactForm').reset();
+    document.getElementById('captcha').value = '';
+    generateCaptcha();
     
     // Close modal
     const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
