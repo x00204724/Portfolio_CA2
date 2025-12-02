@@ -208,3 +208,48 @@ function sendMessage() {
 
 // Initialize breadcrumb updates
 updateBreadcrumb();
+
+
+
+// Form validation
+function validateForm() {
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+    
+    let isValid = true;
+    
+    if (name.value.length < 2) {
+        name.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        name.classList.remove('is-invalid');
+        name.classList.add('is-valid');
+    }
+    
+    if (!email.validity.valid) {
+        email.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        email.classList.remove('is-invalid');
+        email.classList.add('is-valid');
+    }
+    
+    if (message.value.length < 10) {
+        message.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        message.classList.remove('is-invalid');
+        message.classList.add('is-valid');
+    }
+    
+    return isValid;
+}
+
+// Add real-time validation
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
+    inputs.forEach(input => {
+        input.addEventListener('blur', validateForm);
+    });
+});

@@ -82,18 +82,11 @@ html {
 
 /* Card hover effects */
 .card {
-    transition: all 0.4s ease;
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(216, 180, 254, 0.1);
     backdrop-filter: blur(10px);
     background: rgba(196, 167, 252, 0.95) !important;
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(216, 180, 254, 0.3);
-    background: rgba(186, 157, 252, 1);
 }
 
 .card h5 {
@@ -179,23 +172,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #7c3aed !important;
     font-weight: 600 !important;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 h2 {
     margin-bottom: 2rem;
 }
 
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(45deg, #e9d5ff, #ddd6fe);
-    border-radius: 2px;
-}
+
 
 /* Badge styling */
 .badge {
@@ -477,9 +460,7 @@ footer {
 }
 
 .polaroid:hover {
-    transform: rotate(0deg) scale(1.1) !important;
     z-index: 10 !important;
-    box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
 }
 
 .polaroid-image {
