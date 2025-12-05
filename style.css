@@ -121,6 +121,13 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(233,213,255,0.9) !important;
 }
 
+.offcanvas-body {
+    height: 100vh !important;
+}
+.list-group {
+    height: 100% !important;
+}
+
 /* Paragraph / list text inside cards & sections */
 section p,
 .card p,
