@@ -51,13 +51,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==================== Navbar ==================== */
-.navbar, .navbar-brand {
+.navbar {
     backdrop-filter: blur(10px);
     background: rgba(243,232,255,0.95) !important;
     box-shadow: 0 2px 20px rgba(216,180,254,0.2);
 }
 
-.navbar-brand { font-weight: normal; font-size: 1.5rem; font-family: cursive; }
+.navbar-brand {
+    font-weight: normal;
+    font-size: 1.5rem;
+    font-family: cursive;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
 
 /* ==================== Buttons ==================== */
 .btn, .btn-primary, .btn-outline-primary, .btn-outline-light, .btn-outline-dark {
@@ -71,33 +78,77 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-primary:hover { background-color: #c4a7fc !important; }
 
-.btn-outline-primary, .btn-outline-light, .btn-outline-dark {
+.btn-outline-primary, .btn-outline-dark {
     color: #d8b4fe !important;
     border-color: #d8b4fe !important;
     background-color: transparent !important;
 }
-.btn-outline-primary:hover, .btn-outline-light:hover, .btn-outline-dark:hover {
+.btn-outline-primary:hover, .btn-outline-dark:hover {
     background-color: #d8b4fe !important;
     color: #4c1d95 !important;
 }
 
-/* ==================== Cards, Sections, Accordions ==================== */
-.card, .card-body, .accordion-item, .goal-step, #skills .card, #hobbies .card, .bg-light, .modal-content, .offcanvas {
-    background: rgba(196, 167, 252, 0.95) !important;
+.btn-outline-light {
+    color: #4c1d95 !important;
+    border-color: #4c1d95 !important;
+    background-color: rgba(76, 29, 149, 0.1) !important;
+}
+.btn-outline-light:hover {
+    background-color: #4c1d95 !important;
+    color: #fff !important;
+}
+
+/* ============================================================
+   Cards, Sections, Accordions — UPDATED FOR READABILITY
+   ============================================================ */
+
+.card, .card-body, .accordion-item, .goal-step,
+#skills .card, #hobbies .card,
+.bg-light, .modal-content, .offcanvas {
+    background: rgba(240, 230, 255, 0.92) !important; /* lighter lavender */
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(216,180,254,0.1);
     border: 1px solid rgba(216,180,254,0.3) !important;
+    color: #2d1b69 !important; /* readable dark text */
 }
 
-.card h5, .accordion-button { color: #7c3aed; font-weight: 600; }
-.accordion-button:not(.collapsed) { color: #4c1d95; background: linear-gradient(45deg, #e9d5ff, #ddd6fe); }
+.list-group-item {
+    background: rgba(243,232,255,0.8) !important;
+    border: 1px solid rgba(216,180,254,0.4) !important;
+    border-bottom: 1px solid rgba(216,180,254,0.4) !important;
+}
+.list-group-item:hover {
+    background: rgba(233,213,255,0.9) !important;
+}
 
-section, #about, #education, #experience, #projects, #skills, #references, #contact, #faq {
+/* Paragraph / list text inside cards & sections */
+section p,
+.card p,
+.accordion-body p,
+.modal-body p,
+.list-group-item,
+ul li {
+    color: #2d1b69 !important;
+}
+
+/* Accordions */
+.card h5, .accordion-button { 
+    color: #7c3aed !important;
+    font-weight: 600;
+}
+.accordion-button:not(.collapsed) {
+    color: #4c1d95 !important;
+    background: linear-gradient(45deg, #e9d5ff, #ddd6fe) !important;
+}
+
+/* Sections */
+section, #about, #education, #experience, #projects,
+#skills, #references, #contact, #faq {
     scroll-margin-top: 76px;
     margin: 20px 0;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    background: rgba(196, 167, 252, 0.95);
+    background: rgba(240, 230, 255, 0.92) !important; /* lighter background */
     animation: slideInFromBottom 0.8s ease-out;
 }
 
@@ -129,7 +180,11 @@ section, #about, #education, #experience, #projects, #skills, #references, #cont
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
     animation: shimmer 2s infinite;
 }
-@keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
 
 /* ==================== Badges ==================== */
 .badge {
