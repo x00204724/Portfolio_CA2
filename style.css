@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar, .navbar-brand {
     backdrop-filter: blur(10px);
     background: rgba(243,232,255,0.95) !important;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 20px rgba(216,180,254,0.2);
 }
 
 .navbar-brand { font-weight: normal; font-size: 1.5rem; font-family: cursive; }
@@ -82,10 +82,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==================== Cards, Sections, Accordions ==================== */
-.card, .card-body, .accordion-item, .goal-step, #skills .card, #hobbies .card, .bg-light {
+.card, .card-body, .accordion-item, .goal-step, #skills .card, #hobbies .card, .bg-light, .modal-content, .offcanvas {
     background: rgba(196, 167, 252, 0.95) !important;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(216,180,254,0.1);
+    border: 1px solid rgba(216,180,254,0.3) !important;
 }
 
 .card h5, .accordion-button { color: #7c3aed; font-weight: 600; }
@@ -149,10 +150,13 @@ section, #about, #education, #experience, #projects, #skills, #references, #cont
     border: 2px solid rgba(216,180,254,0.3);
     border-radius: 10px;
     transition: all 0.3s ease;
+    background: rgba(243,232,255,0.8) !important;
+    color: #4c1d95 !important;
 }
 .form-control:focus {
     border-color: #e9d5ff;
     box-shadow: 0 0 0 0.2rem rgba(233,213,255,0.25);
+    background: rgba(243,232,255,0.95) !important;
 }
 
 /* ==================== Footer ==================== */
