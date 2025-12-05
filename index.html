@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annit's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annit's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body data-bs-theme="dark">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Annit Maria Binu</a>
-    <div class="d-flex align-items-center">
-      <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#quickLinks">
-        <i class="fas fa-bars"></i> Menu
-      </button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Annit Maria Binu</a>
+      <div class="d-flex align-items-center">
+        <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#quickLinks">
+          <i class="fas fa-bars"></i> Menu
+        </button>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<nav class="border-bottom" style="background: rgba(196, 167, 252, 0.95);">
-  <div class="container">
-    <ol class="breadcrumb mb-0 py-2">
-      <li class="breadcrumb-item active" id="current-section">Home</li>
-    </ol>
-  </div>
-</nav>
+  <!-- Breadcrumb -->
+  <nav class="border-bottom">
+    <div class="container">
+      <ol class="breadcrumb mb-0 py-2">
+        <li class="breadcrumb-item active" id="current-section">Home</li>
+      </ol>
+    </div>
+  </nav>
 
-<div id="hero" class="text-center bg-light py-5">
-  <div class="container">
-    <h1>Annit Maria Binu</h1>
-    <p class="lead">Final Year Cloud Computing Student | Full Stack Developer</p>
-  </div>
-</div>
+  <!-- Hero Section -->
+  <section id="hero" class="text-center py-5">
+    <div class="container">
+      <h1>Annit Maria Binu</h1>
+      <p class="lead">Final Year Cloud Computing Student | Full Stack Developer</p>
+    </div>
+  </section>
 
-<div id="about" class="py-5">
+  <!-- About Me -->
+  <section id="about" class="py-5">
     <div class="container">
       <h2>About Me</h2>
       <div class="row mb-3">
@@ -47,37 +53,44 @@
           <p><b>Location:</b> Swords, Co. Dublin, Ireland</p>
         </div>
       </div>
-      <p>Hi! I'm Annit Maria Binu, a Cloud Computing student at Technological University Dublin. I've gained hands on experience in network troubleshooting, secure data handling, and working with HTML, JavaScript, CSS, and SQL. I like using my technical skills to solve practical problems and make sure the work I deliver is accurate and reliable.</p>
-      <p>I'm organised, quick to pick things up, and able to work well on my own or with a team. I care about clear communication, paying attention to detail, and keeping things professional while still being easy to work with.</p>
+      <p>Hi! I'm Annit Maria Binu, a Cloud Computing student at Technological University Dublin. I've gained hands-on
+        experience in network troubleshooting, secure data handling, and working with HTML, JavaScript, CSS, and SQL. I
+        like using my technical skills to solve practical problems and make sure the work I deliver is accurate and
+        reliable.</p>
+      <p>I'm organised, quick to pick things up, and able to work well on my own or with a team. I care about clear
+        communication, paying attention to detail, and keeping things professional while still being easy to work with.
+      </p>
     </div>
-</div>
+  </section>
 
-<div id="education" class="py-5 bg-light">
+  <!-- Education -->
+  <section id="education" class="py-5">
     <div class="container">
       <h2>Education</h2>
       <div class="accordion" id="educationAccordion">
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            <button class="accordion-button bg-white text-dark" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne">
               BSc (Hons) in Cloud Computing (Level 8) TU Dublin
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#educationAccordion">
             <div class="accordion-body">
-              <p><b>Duration:</b> 2022 Present</p>
+              <p><b>Duration:</b> 2022 - Present</p>
               <h6>Key Modules & Grades:</h6>
               <div class="row">
                 <div class="col-md-6">
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between">
+                    <li class="list-group-item d-flex justify-content-between bg-white text-dark">
                       <span>Private Cloud Architecture</span>
                       <span class="badge bg-primary">B+</span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between">
+                    <li class="list-group-item d-flex justify-content-between bg-white text-dark">
                       <span>Systems Operations and Public Cloud</span>
                       <span class="badge bg-primary">A-</span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between">
+                    <li class="list-group-item d-flex justify-content-between bg-white text-dark">
                       <span>Enterprise Performance Architecture</span>
                       <span class="badge bg-primary">B+</span>
                     </li>
@@ -85,15 +98,15 @@
                 </div>
                 <div class="col-md-6">
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between">
+                    <li class="list-group-item d-flex justify-content-between bg-white text-dark">
                       <span>Interactive Media Design and Visualisation</span>
                       <span class="badge bg-primary">A</span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between">
+                    <li class="list-group-item d-flex justify-content-between bg-white text-dark">
                       <span>Final Project Cloud</span>
                       <span class="badge bg-primary">B+</span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between">
+                    <li class="list-group-item d-flex justify-content-between bg-white text-dark">
                       <span>DevOps</span>
                       <span class="badge bg-primary">B+</span>
                     </li>
@@ -106,22 +119,26 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            <button class="accordion-button collapsed bg-white text-dark" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo">
               Leaving Certificate Loreto College, Swords
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
-            <div class="accordion-body">
-              <p><b>Duration:</b> 2013 2021</p>
-              <p>I studied Higher Level Maths, French, Chemistry, and Biology, which gave me a solid foundation in STEM and helped build strong problem solving skills.</p>
+            <div class="accordion-body bg-white text-dark">
+              <p><b>Duration:</b> 2013 - 2021</p>
+              <p>I studied Higher Level Maths, French, Chemistry, and Biology, which gave me a solid foundation in STEM
+                and helped build strong problem-solving skills.</p>
             </div>
           </div>
         </div>
+
       </div>
     </div>
-</div>
+  </section>
 
-<div id="experience" class="py-5">
+  <!-- Work Experience -->
+  <section id="experience" class="py-5">
     <div class="container">
       <h2>Work Experience</h2>
       <div class="row">
@@ -131,10 +148,10 @@
               <img src="images/dafm.png" alt="DAFM Logo" style="width: 140px; height: 60px; margin-right: 10px;">
               <h5 class="mb-0">Network Engineer Intern</h5>
             </div>
-            <p>Department of Agriculture, Food and the Marine Dublin | Jan 2025 Aug 2025</p>
+            <p>Department of Agriculture, Food and the Marine Dublin | Jan 2025 - Aug 2025</p>
             <ul>
               <li>Helped staff connect to the department's network and resolved technical issues</li>
-              <li>Contacted farmers for updates on fibre and Wi Fi installations</li>
+              <li>Contacted farmers for updates on fibre and Wi-Fi installations</li>
               <li>Worked with network cables and organised hardware setups</li>
               <li>Gained communication and troubleshooting experience while handling user data securely</li>
             </ul>
@@ -143,10 +160,11 @@
         <div class="col-md-6 mb-3">
           <div class="card p-3 h-100">
             <div class="d-flex align-items-center mb-2">
-              <img src="images/specsavers.jpg" alt="Specsavers Logo" style="width: 140px; height: 60px; margin-right: 10px;">
+              <img src="images/specsavers.jpg" alt="Specsavers Logo"
+                style="width: 140px; height: 60px; margin-right: 10px;">
               <h5 class="mb-0">Optical Assistant</h5>
             </div>
-            <p>Specsavers Swords, Co. Dublin | May 2022 July 2022</p>
+            <p>Specsavers Swords, Co. Dublin | May 2022 - July 2022</p>
             <ul>
               <li>Helped customers with appointments and ensured comfort</li>
               <li>Managed paperwork and payments while following GDPR rules</li>
@@ -160,26 +178,28 @@
         <div class="col-md-6 mb-3">
           <div class="card p-3 h-100">
             <div class="d-flex align-items-center mb-2">
-              <img src="images/delta.png" alt="Delta Airlines Logo" style="width: 140px; height: 60px; margin-right: 10px;">
+              <img src="images/delta.png" alt="Delta Airlines Logo"
+                style="width: 140px; height: 60px; margin-right: 10px;">
               <h5 class="mb-0">Aircraft Packer</h5>
             </div>
-            <p>Delta Airlines, Dublin Airport | Aug 2022 Oct 2022</p>
+            <p>Delta Airlines, Dublin Airport | Aug 2022 - Oct 2022</p>
             <ul>
               <li>Performed manual handling and packing operations for aircraft cargo</li>
               <li>Managed shelf restocking and inventory counting systems</li>
               <li>Processed incoming and outgoing orders with accuracy and speed</li>
               <li>Ensured immediate shipment of orders while maintaining quality standards</li>
-              <li>Developed strong sales and communication skills in fast paced environment</li>
+              <li>Developed strong sales and communication skills in fast-paced environment</li>
             </ul>
           </div>
         </div>
         <div class="col-md-6 mb-3">
           <div class="card p-3 h-100">
             <div class="d-flex align-items-center mb-2">
-              <img src="images/pizzahut.png" alt="Pizza Hut Logo" style="width: 140px; height: 60px; margin-right: 10px;">
+              <img src="images/pizzahut.png" alt="Pizza Hut Logo"
+                style="width: 140px; height: 60px; margin-right: 10px;">
               <h5 class="mb-0">Food Service Worker</h5>
             </div>
-            <p>Pizza Hut Swords, Co. Dublin | Sep 2021 Nov 2021</p>
+            <p>Pizza Hut Swords, Co. Dublin | Sep 2021 - Nov 2021</p>
             <ul>
               <li>Operated cash register and processed customer payments efficiently</li>
               <li>Handled cash and card transactions with accuracy</li>
@@ -191,16 +211,19 @@
         </div>
       </div>
     </div>
-</div>
+  </section>
 
-<div id="projects" class="py-5">
+  <!-- Projects -->
+  <section id="projects" class="py-5">
     <div class="container">
       <h2>Projects</h2>
       <div class="row">
         <div class="col-md-6 mb-3">
           <div class="card p-4 h-100">
             <h5>Portfolio Website</h5>
-            <p>I built a responsive portfolio website to showcase my skills and experience. It includes a clean layout, dark mode, and easy navigation, as well as a working contact form and basic form validation with a CAPTCHA.</p>
+            <p>I built a responsive portfolio website to showcase my skills and experience. It includes a clean layout,
+              dark mode, and easy navigation, as well as a working contact form and basic form validation with a
+              CAPTCHA.</p>
             <p><b>Technologies used:</b> HTML5, CSS3, JavaScript, Bootstrap 5</p>
             <p><b>Features:</b> Responsive design, form validation, CAPTCHA system</p>
           </div>
@@ -208,16 +231,19 @@
         <div class="col-md-6 mb-3">
           <div class="card p-4 h-100">
             <h5>Go Karting System with MQTT Integration</h5>
-            <p>Built a system that tracks go kart race data in real time using MQTT and SQL. Collected and displayed live stats like lap times and speed.</p>
-            <p>Created a front end interface using HTML, JavaScript, and SQL. Focused on accurate data handling and clear real time updates.</p>
+            <p>Built a system that tracks go-kart race data in real time using MQTT and SQL. Collected and displayed
+              live stats like lap times and speed.</p>
+            <p>Created a front-end interface using HTML, JavaScript, and SQL. Focused on accurate data handling and
+              clear real-time updates.</p>
             <p><b>Tools:</b> MQTT, SQL, HTML, JavaScript, Supabase</p>
           </div>
         </div>
       </div>
     </div>
-</div>
+  </section>
 
-<div id="skills" class="py-5">
+  <!-- Skills -->
+  <section id="skills" class="py-5">
     <div class="container">
       <h2>Certifications and Achievements</h2>
       <div class="row">
@@ -247,16 +273,18 @@
         </div>
       </div>
     </div>
-</div>
+  </section>
 
-<div id="references" class="py-5">
-    <div class="container text-center">
+  <!-- References -->
+  <section id="references" class="py-5 text-center">
+    <div class="container">
       <h2>References</h2>
       <p class="lead">Available upon request</p>
     </div>
-</div>
+  </section>
 
-<div id="contact" class="py-5 text-center">
+  <!-- Contact -->
+  <section id="contact" class="py-5 text-center">
     <div class="container">
       <h2>Contact Me</h2>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
@@ -267,9 +295,10 @@
         Send Message
       </button>
     </div>
-</div>
+  </section>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="quickLinks" data-bs-theme="dark">
+  <!-- Offcanvas Quick Links -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="quickLinks" style="background-color: #6f42c1 !important;">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title">Quick Links</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -278,17 +307,20 @@
       <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-home"></i> Home</a>
         <a href="#about" class="list-group-item list-group-item-action"><i class="fas fa-user"></i> About</a>
-        <a href="#education" class="list-group-item list-group-item-action"><i class="fas fa-graduation-cap"></i> Education</a>
-        <a href="#experience" class="list-group-item list-group-item-action"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="#education" class="list-group-item list-group-item-action"><i class="fas fa-graduation-cap"></i>
+          Education</a>
+        <a href="#experience" class="list-group-item list-group-item-action"><i class="fas fa-briefcase"></i>
+          Experience</a>
         <a href="#projects" class="list-group-item list-group-item-action"><i class="fas fa-code"></i> Projects</a>
         <a href="#skills" class="list-group-item list-group-item-action"><i class="fas fa-certificate"></i> Skills</a>
         <a href="#contact" class="list-group-item list-group-item-action"><i class="fas fa-envelope"></i> Contact</a>
         <a href="#faq" class="list-group-item list-group-item-action"><i class="fas fa-question-circle"></i> FAQ</a>
       </div>
     </div>
-</div>
+  </div>
 
-<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -317,7 +349,8 @@
               <div class="invalid-feedback">Message must be at least 10 characters long.</div>
             </div>
             <div class="mb-3">
-              <label for="captcha" class="form-label">Security Check: What is <span id="captcha-question"></span>? <span class="text-danger">*</span></label>
+              <label for="captcha" class="form-label">Security Check: What is <span id="captcha-question"></span>? <span
+                  class="text-danger">*</span></label>
               <input type="number" class="form-control" id="captcha" placeholder="Enter the answer" required>
               <div class="form-text">Please solve the simple math problem above</div>
               <div class="invalid-feedback">Please solve the math problem correctly.</div>
@@ -340,15 +373,17 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
 
-<div id="faq" class="py-5">
+  <!-- FAQ Section -->
+  <section id="faq" class="py-5">
     <div class="container">
       <h2>Frequently Asked Questions</h2>
       <div class="accordion" id="faqAccordion">
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            <button class="accordion-button bg-white text-dark" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq1">
               How can I contact you?
             </button>
           </h2>
@@ -358,7 +393,8 @@
               <ul>
                 <li>Email: annitbinu21@gmail.com</li>
                 <li>Phone: 089 467 6225</li>
-                <li>LinkedIn: <a href="https://linkedin.com/in/annitbinu" target="_blank">linkedin.com/in/annitbinu</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/annitbinu" target="_blank">linkedin.com/in/annitbinu</a>
+                </li>
                 <li>Contact form on this website</li>
               </ul>
             </div>
@@ -366,7 +402,8 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            <button class="accordion-button collapsed bg-white text-dark" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq2">
               Are you available for internships?
             </button>
           </h2>
@@ -378,13 +415,15 @@
         </div>
       </div>
     </div>
-</div>
+  </section>
 
-<div class="text-center py-3">
+  <!-- Footer -->
+  <footer class="text-center py-3">
     <p>&copy; 2024 Annit Maria Binu. All rights reserved.</p>
-</div>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
