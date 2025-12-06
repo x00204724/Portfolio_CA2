@@ -1,4 +1,4 @@
-/* ==================== Global Styles ==================== */
+/* Global styles */
 body {
     background: url('images/hero-bg2.jpg.jpeg') center/cover fixed;
     scroll-behavior: smooth;
@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
 }
 
-/* ==================== Hero Section ==================== */
+/* hero section styling */
 #hero {
     background: url('images/hero-bg2.jpg.jpeg') center/cover no-repeat,
                 linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #ddd6fe 100%);
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ==================== Navbar ==================== */
+/* navbar */
 .navbar {
     backdrop-filter: blur(10px);
     background: rgba(243,232,255,0.95) !important;
@@ -66,7 +66,11 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: none !important;
 }
 
-/* ==================== Buttons ==================== */
+.navbar-brand:hover {
+    color: #7c3aed !important;
+}
+
+/* button styles */
 .btn, .btn-primary, .btn-outline-primary, .btn-outline-light, .btn-outline-dark {
     transition: all 0.3s ease;
 }
@@ -98,18 +102,15 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff !important;
 }
 
-/* ============================================================
-   Cards, Sections, Accordions — UPDATED FOR READABILITY
-   ============================================================ */
+/* cards and sections */
 
-.card, .card-body, .accordion-item, .goal-step,
-#skills .card, #hobbies .card,
+.card, .card-body, .accordion-item,
 .bg-light, .modal-content, .offcanvas {
-    background: rgba(240, 230, 255, 0.92) !important; /* lighter lavender */
+    background: rgba(240, 230, 255, 0.92) !important;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(216,180,254,0.1);
     border: 1px solid rgba(216,180,254,0.3) !important;
-    color: #2d1b69 !important; /* readable dark text */
+    color: #2d1b69 !important;
 }
 
 .list-group-item {
@@ -128,17 +129,11 @@ h1, h2, h3, h4, h5, h6 {
     height: 100% !important;
 }
 
-/* Paragraph / list text inside cards & sections */
-section p,
-.card p,
-.accordion-body p,
-.modal-body p,
-.list-group-item,
-ul li {
+section p, .card p, .accordion-body p, .modal-body p, .list-group-item, ul li {
     color: #2d1b69 !important;
 }
 
-/* Accordions */
+/* accordion styling */
 .card h5, .accordion-button { 
     color: #7c3aed !important;
     font-weight: 600;
@@ -148,14 +143,13 @@ ul li {
     background: linear-gradient(45deg, #e9d5ff, #ddd6fe) !important;
 }
 
-/* Sections */
-section, #about, #education, #experience, #projects,
-#skills, #references, #contact, #faq {
+/* main sections */
+section, #about, #education, #experience, #projects, #certifications, #skills, #hobbies, #references, #contact, #faq {
     scroll-margin-top: 76px;
     margin: 20px 0;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    background: rgba(240, 230, 255, 0.92) !important; /* lighter background */
+    background: rgba(240, 230, 255, 0.92) !important;
     animation: slideInFromBottom 0.8s ease-out;
 }
 
@@ -164,36 +158,7 @@ section, #about, #education, #experience, #projects,
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ==================== Progress Bars ==================== */
-.progress {
-    height: 12px;
-    border-radius: 10px;
-    background: rgba(216,180,254,0.2);
-    overflow: hidden;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.progress-bar {
-    border-radius: 10px;
-    transition: width 2s ease;
-    background: linear-gradient(45deg, #e9d5ff, #ddd6fe, #c4b5fd);
-    position: relative;
-    overflow: hidden;
-}
-.progress-bar::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-    animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-
-/* ==================== Badges ==================== */
+/* badges */
 .badge {
     margin: 2px;
     border-radius: 20px;
@@ -207,7 +172,7 @@ section, #about, #education, #experience, #projects,
 .badge:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(233,213,255,0.6); }
 .badge.bg-primary { background-color: #d8b4fe !important; color: #4c1d95 !important; }
 
-/* ==================== Forms ==================== */
+/* form styling */
 .form-control {
     border: 2px solid rgba(216,180,254,0.3);
     border-radius: 10px;
@@ -221,17 +186,16 @@ section, #about, #education, #experience, #projects,
     background: rgba(243,232,255,0.95) !important;
 }
 
-/* ==================== Footer ==================== */
-footer, .text-center.py-3 { margin-top: 50px; }
+/* footer */
+footer, .text-center.py-3 { 
+    margin-top: 50px; 
+}
 
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 
-/* ==================== Responsive ==================== */
+/* responsive design for mobile */
 @media (max-width: 768px) {
     body { padding-top: 60px; }
     #hero { min-height: 60vh; }
     #hero h1 { font-size: 2.5rem; }
-    .carousel-item .card { min-height: 200px; }
-    .card:hover { transform: translateY(-5px) scale(1.01); }
-}  
+}
