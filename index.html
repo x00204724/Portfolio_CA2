@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Annit's Portfolio</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="style.css">
 <style>* { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important; }</style>
 </head>
@@ -13,7 +13,7 @@
 <nav class="navbar navbar-expand-lg">
 <div class="container">
 <a class="navbar-brand" href="#">Annit Maria Binu</a>
-<button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#quickLinks"><i class="fas fa-bars"></i> Menu</button>
+<button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#quickLinks"><i class="bi bi-list"></i> Menu</button>
 </div>
 </nav>
 <nav class="border-bottom">
@@ -80,7 +80,7 @@ I'm organised, curious and quick to learn new tools and technologies. I enjoy wo
 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
 <div class="accordion-body bg-white text-dark">
 <p><b>Duration:</b> 2013 - 2021</p>
-<p>During secondary school at Loreto College, I focused on Higher Level Maths, French, Chemistry and Biology. These subjects helped me develop strong analytical and problem solving skills, a solid foundation in STEM and an appreciation for logical thinking and attention to detail, skills that I continue to apply in my studies and projects today.</p>
+<p>I took Higher Level Maths, French, Chemistry and Biology. The maths and sciences definitely helped prepare me for the technical side of college, and I still use that logical thinking approach in my projects today.</p>
 </div>
 </div>
 </div>
@@ -170,7 +170,7 @@ I'm organised, curious and quick to learn new tools and technologies. I enjoy wo
 <div class="col-md-6 mb-3">
 <div class="card p-4 h-100">
 <h5>Portfolio Website</h5>
-<p>Developed a responsive portfolio website to showcase my skills, projects. Implemented a mobile first design approach using Bootstrap 5 for cross device compatibility. Integrated form validation, CAPTCHA functionality to enhance security. This project strengthened my front end development skills, understanding of user interface design principles.</p>
+<p>Built this portfolio from scratch to showcase my work and skills. Used Bootstrap 5 to make sure it looks good on phones, tablets and desktops. Added form validation and a simple CAPTCHA to keep things secure. This project helped me get better at front-end development and thinking about how users interact with websites.</p>
 <p><b>Technologies used:</b> HTML5, CSS3, JavaScript, Bootstrap 5</p>
 <p><b>Features:</b> Responsive design, form validation, CAPTCHA system</p>
 </div>
@@ -178,7 +178,7 @@ I'm organised, curious and quick to learn new tools and technologies. I enjoy wo
 <div class="col-md-6 mb-3">
 <div class="card p-4 h-100">
 <h5>Go Karting System with MQTT Integration</h5>
-<p>Built a real time go kart tracking system using MQTT protocol, SQL database. The system captures live race metrics including lap times, speed, positions through a web based interface. This project provided valuable experience in real time data handling, message queue integration, database management using Supabase.</p>
+<p>Created a system that tracks go-karts in real time using MQTT and SQL. It shows lap times, speeds and positions on a web interface as races happen. This was a fun project that taught me a lot about handling live data and working with message queues and databases.</p>
 <p><b>Tools:</b> MQTT, SQL, HTML, JavaScript, Supabase</p>
 </div>
 </div>
@@ -271,23 +271,23 @@ I'm organised, curious and quick to learn new tools and technologies. I enjoy wo
 <button class="btn btn-outline-primary ms-2" onclick="showLoading(this)"><span class="spinner-border spinner-border-sm d-none" role="status"></span>Send Message</button>
 </div>
 </section>
-<div class="offcanvas offcanvas-end" tabindex="-1" id="quickLinks" style="background-color: #6f42c1 !important;">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="quickLinks">
 <div class="offcanvas-header">
 <h5 class="offcanvas-title">Quick Links</h5>
 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
 </div>
 <div class="offcanvas-body">
 <div class="list-group">
-<a href="#" class="list-group-item list-group-item-action"><i class="fas fa-home"></i> Home</a>
-<a href="#about" class="list-group-item list-group-item-action"><i class="fas fa-user"></i> About</a>
-<a href="#education" class="list-group-item list-group-item-action"><i class="fas fa-graduation-cap"></i> Education</a>
-<a href="#experience" class="list-group-item list-group-item-action"><i class="fas fa-briefcase"></i> Experience</a>
-<a href="#projects" class="list-group-item list-group-item-action"><i class="fas fa-code"></i> Projects</a>
-<a href="#certifications" class="list-group-item list-group-item-action"><i class="fas fa-certificate"></i> Certifications</a>
-<a href="#skills" class="list-group-item list-group-item-action"><i class="fas fa-tools"></i> Skills</a>
-<a href="#hobbies" class="list-group-item list-group-item-action"><i class="fas fa-heart"></i> Hobbies</a>
-<a href="#contact" class="list-group-item list-group-item-action"><i class="fas fa-envelope"></i> Contact</a>
-<a href="#faq" class="list-group-item list-group-item-action"><i class="fas fa-question-circle"></i> FAQ</a>
+<a href="#" class="list-group-item list-group-item-action"><i class="bi bi-house"></i> Home</a>
+<a href="#about" class="list-group-item list-group-item-action"><i class="bi bi-person"></i> About</a>
+<a href="#education" class="list-group-item list-group-item-action"><i class="bi bi-mortarboard"></i> Education</a>
+<a href="#experience" class="list-group-item list-group-item-action"><i class="bi bi-briefcase"></i> Experience</a>
+<a href="#projects" class="list-group-item list-group-item-action"><i class="bi bi-code-slash"></i> Projects</a>
+<a href="#certifications" class="list-group-item list-group-item-action"><i class="bi bi-award"></i> Certifications</a>
+<a href="#skills" class="list-group-item list-group-item-action"><i class="bi bi-tools"></i> Skills</a>
+<a href="#hobbies" class="list-group-item list-group-item-action"><i class="bi bi-heart"></i> Hobbies</a>
+<a href="#contact" class="list-group-item list-group-item-action"><i class="bi bi-envelope"></i> Contact</a>
+<a href="#faq" class="list-group-item list-group-item-action"><i class="bi bi-question-circle"></i> FAQ</a>
 </div>
 </div>
 </div>
