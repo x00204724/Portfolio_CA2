@@ -1,52 +1,4 @@
-// Dynamic content functionality
-
-// 1. Animated skill bars
-document.addEventListener('DOMContentLoaded', function() {
-    // Animate progress bars when they come into view
-    const progressBars = document.querySelectorAll('.progress-bar');
-    
-    const animateProgressBars = () => {
-        progressBars.forEach(bar => {
-            const rect = bar.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                bar.style.transition = 'width 2s ease-in-out';
-            }
-        });
-    };
-    
-    window.addEventListener('scroll', animateProgressBars);
-    animateProgressBars(); // Run once on load
-});
-
-// 2. Dynamic date and time in footer
-function updateDateTime() {
-    const now = new Date();
-    const options = { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric', 
-        hour: '2-digit', 
-        minute: '2-digit' 
-    };
-    const dateTimeString = now.toLocaleDateString('en-US', options);
-    
-    const footerElement = document.getElementById('current-time');
-    if (footerElement) {
-        footerElement.textContent = `Last updated: ${dateTimeString}`;
-    }
-}
-
-// Update time every minute
-setInterval(updateDateTime, 60000);
-updateDateTime(); // Run once on load
-
-// Initialize tooltips on page load
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-});
-
-// 3. Smooth scrolling for navigation links
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -60,52 +12,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// 4. Professional status updates
-const statusUpdates = [
-    "Currently seeking internship opportunities for Summer 2025",
-    "Available for networking and collaboration opportunities",
-    "Actively developing cloud computing and data visualization skills",
-    "Open to discussing technology projects and innovations"
-];
-
-function displayStatusUpdate() {
-    const statusElement = document.getElementById('status-update');
-    if (statusElement) {
-        const randomStatus = statusUpdates[Math.floor(Math.random() * statusUpdates.length)];
-        statusElement.textContent = randomStatus;
-    }
-}
-
-// Update status every 15 seconds
-setInterval(displayStatusUpdate, 15000);
-displayStatusUpdate(); // Run once on load
-
-// 5. Project filter functionality
-function filterProjects(year) {
-    const carousel = document.getElementById('projectCarousel');
-    const items = carousel.querySelectorAll('.carousel-item');
-    
-    if (year === 'all') {
-        items.forEach(item => item.style.display = 'block');
-    } else {
-        items.forEach((item, index) => {
-            const yearMatch = item.textContent.includes(`${year}th Year`);
-            item.style.display = yearMatch ? 'block' : 'none';
-        });
-    }
-}
-
-// 6. Initialize tooltips
-document.addEventListener('DOMContentLoaded', function() {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-});
-
-// 7. Breadcrumb navigation update
+// Breadcrumb navigation update
 function updateBreadcrumb() {
-    const sections = ['about', 'education', 'experience', 'projects', 'skills', 'hobbies', 'contact'];
+    const sections = ['about', 'education', 'experience', 'projects', 'certifications', 'skills', 'hobbies', 'references', 'contact', 'faq'];
     const currentSection = document.getElementById('current-section');
     
     window.addEventListener('scroll', () => {
@@ -123,17 +32,7 @@ function updateBreadcrumb() {
     });
 }
 
-// 8. Download CV functionality
-function downloadCV() {
-    const link = document.createElement('a');
-    link.href = 'cv.pdf';
-    link.download = 'Annit_Maria_Binu_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-
-// 9. Loading spinner functionality
+// Loading spinner functionality
 function showLoading(button) {
     const spinner = button.querySelector('.spinner-border');
     spinner.classList.remove('d-none');
@@ -146,7 +45,7 @@ function showLoading(button) {
     }, 2000);
 }
 
-// 10. CAPTCHA functionality
+// CAPTCHA functionality
 let captchaAnswer = 0;
 
 function generateCaptcha() {
@@ -168,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// 11. Send message functionality
+// Send message functionality
 function sendMessage() {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -183,7 +82,7 @@ function sendMessage() {
     // Verify CAPTCHA
     if (parseInt(captchaInput) !== captchaAnswer) {
         alert('Incorrect security answer. Please try again.');
-        generateCaptcha(); // Generate new CAPTCHA
+        generateCaptcha();
         document.getElementById('captcha').value = '';
         return;
     }
@@ -205,11 +104,6 @@ function sendMessage() {
     const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
     modal.hide();
 }
-
-// Initialize breadcrumb updates
-updateBreadcrumb();
-
-
 
 // Form validation
 function validateForm() {
@@ -246,8 +140,12 @@ function validateForm() {
     return isValid;
 }
 
-// Add real-time validation
+// Initialize functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize breadcrumb updates
+    updateBreadcrumb();
+    
+    // Add real-time validation
     const inputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
     inputs.forEach(input => {
         input.addEventListener('blur', validateForm);
